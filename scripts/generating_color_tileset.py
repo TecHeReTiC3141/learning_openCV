@@ -25,11 +25,9 @@ for b in range(256):
 
 # tileset = tileset.reshape((2 ** 10, 2 ** 10, 3))
 
-np.save('tileset.npy', res)
-with open('tileset.npy', 'rb') as tile:
-    tileset = np.load(tile)
-    print(tileset.shape)
-cv2.imshow('tileset', tileset)
-cv2.imwrite('tileset.jpg', tileset)
+# np.save('tileset.npy', res)
+
+cv2.imshow('tileset', res)
+cv2.imwrite('tileset.jpg', res)
 cv2.waitKey(2500)
 cv2.destroyAllWindows()
